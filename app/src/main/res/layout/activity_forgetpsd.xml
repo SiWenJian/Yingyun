@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="找回密码"
+            android:gravity="center"
+            android:textColor="@color/textcolor"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp">
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/et_underline"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColor="@color/textcolor"
+                android:textCursorDrawable="@drawable/et_cursor"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/empty_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/empty"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_sure"
+            android:text="确  定"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:clickable="false"/>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@anim/progressbar_loading"/>
+
+</RelativeLayout>
